@@ -8,13 +8,16 @@ function solution1(message) {
 
     const position = i + 1;
     if (position % 3 === 0 && position !== message.length) {
-      superMessage += ",";
+      superMessage += ","; //separa as letras a cada 3 [LOS,SSP,SSS]
     }
   }
 
   for (const word of superMessage.split(",")) {
-    for (var i = 0; i < word.length; i++) {
+    // separa as palavras por , [LOS , SSP , SSS]
+    for (let i = 0; i < word.length; i++) {
+      // loop de cada 3
       if (word[i] !== correctMessage[i]) {
+        //compara cada letra com as letras da palavra correta
         notAllowedLetters.push(word[i]);
       }
     }
@@ -42,6 +45,6 @@ function solution2(message) {
   return notAllowedLetters.length;
 }
 
-const message = "LOSSSPSSSZ";
+const message = "SOSSOOSOO";
 
-console.log(solution2(message));
+console.log(solution1(message));

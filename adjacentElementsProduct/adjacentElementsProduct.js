@@ -1,5 +1,5 @@
 function solution(inputArray) {
-  let result = 0;
+  let result = -Infinity;
   for (let i = 0; i < inputArray.length; i++) {
     if (inputArray[i] * inputArray[i + 1] > result) {
       result = inputArray[i] * inputArray[i + 1];
