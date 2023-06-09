@@ -1,5 +1,5 @@
 const perfectPairs = (arr, n) => {
-  let indexSum = [];
+  const indexSum = [];
 
   arr.forEach((element, i) => {
     for (let index = i + 1; index < arr.length; index++) {
@@ -12,4 +12,4 @@ const perfectPairs = (arr, n) => {
   console.log("result", Math.min(...indexSum));
 };
 
-perfectPairs([1, 2, 2, 5, 3], 4);
+perfectPairs([1, 3, 2, 4], 4);
